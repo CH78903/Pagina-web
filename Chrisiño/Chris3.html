@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Estructura con Columnas</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5b6269;
+            padding: 10px 20px;
+        }
+
+        /* Estilo para controlar el tamaño fijo del logotipo pequeño */
+        .logo-pequeno {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        .barra-navegacion {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .boton-nav {
+            text-decoration: none;
+            color: brown;
+            background-color: burlywood;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: sans-serif;
+            transition: background-color 0.3s;
+        }
+
+        .boton-nav:hover {
+            background-color: #309eac;
+            color: white;
+        }
+
+        .boton-nav.activo {
+            background-color: rgba(235, 170, 91, 0.744);
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #474349;
+            padding: 15px;
+            color: white;
+        }
+
+        section {
+            width: 75%;
+            background-color: #4c5556;
+            padding: 15px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 style="margin: 0;">Tigres</h1>
+
+            <!-- Se corrigió el nombre de la clase a 'barra-navegacion' -->
+            <nav class="barra-navegacion">
+                <!-- Se conectaron los enlaces a tus archivos .html reales -->
+                <a href="Chris1.html" class="boton-nav activo">Inicio</a>
+                <a href="Chris2.html" class="boton-nav">Servicios</a>
+                <a href="Chris3.html" class="boton-nav">Contacto</a>
+            </nav>
+        </div>
+        <!-- Se corrigió la sintaxis de las comillas e imagen -->
+        <img src="data:image/png;base64,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" alt="logo de mi sitio web" title="logo de la marca" class="logo-pequeno">
+    </header>
+
+    <main>
+        <aside>
+            <h3>Carls Jr 
+            </h3>
+            <p>Nuevo combo ultra rico</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyQ1gg-CUjtWs1V9GITpNwrUikQuT1dLOWhe7ma4vgjg&s=10" alt="anuncio" title="logo del anuncio" class="logo-pequeno">
+
+
+        </aside>
+        <section>
+            <article>
+                <h2>Historia De tigres</h2>
+                <p>El Club Tigres de la UANL nació en 1960 ligado a la Universidad Autónoma de Nuevo León y, tras su ascenso en 1974, conoció la gloria rápidamente con sus dos primeros títulos de liga (1978 y 1982) bajo el mando de Carlos Miloc. A pesar de sufrir un doloroso descenso en 1996, el equipo resurgió con fuerza institucional y, a partir de 2011, vivió su época más gloriosa de la mano de Ricardo Ferretti y el goleador histórico André-Pierre Gignac, consolidándose como un gigante moderno del fútbol mexicano que hoy presume 8 títulos de Liga MX y un subcampeonato mundial.
+</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+</body>
+
+</html>
